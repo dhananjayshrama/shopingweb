@@ -19,5 +19,7 @@ app.get("/", (req, res) => res.send("Shop API is running"));
 // 3. Routes after middleware
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/products", require("./routes/productRoutes"));
+app.use("/api/cart", require("./routes/cartRoutes"));
+app.use("/api/orders", require("./routes/orderRoutes"));
 
 module.exports = app;
