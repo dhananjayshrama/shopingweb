@@ -13,6 +13,7 @@ const userSchema = new mongoose.Schema(
     },
     password: { type: String, required: true, minlength: 6, select: false },
     role: { type: String, enum: ["user", "admin"], default: "user" },
+    wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
   },
   { timestamps: true }
 );
